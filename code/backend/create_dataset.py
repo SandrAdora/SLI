@@ -1,8 +1,7 @@
 ###################################################
-
-
-
-
+# This program creates the dataset for Classifier #
+#                                                 #
+###################################################
 
 import os
 import mediapipe as mp 
@@ -46,7 +45,8 @@ for dir_ in os.listdir(DATA):
             data.append(data_xy)
             labels.append(dir_)
         
-        
+
+# Generate the file data.pickle and store dataset from lists data and labels in it      
 f=open('data.pickle', 'wb')
 pickle.dump({'data': data, 'labels':labels}, f)
 f.close()
