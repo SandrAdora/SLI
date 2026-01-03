@@ -1,1 +1,2 @@
-./code/backend/ai_agents/prepare_data
+code/backend/ai_agents/prepare_data/data/
+.env
