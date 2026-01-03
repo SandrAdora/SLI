@@ -1,5 +1,7 @@
 # Learning process while creating this project
 
+## Python Libs
+
 * **Media Pipline**
   * A lib. used to track *hand gestures* in real time
 * **OpenCV**
@@ -10,3 +12,5 @@
   * Will be using the *American language Gesture* data
 * **Pandas**
   * A lib used to store the collected landmark data in a *csv* file for training
+* Matplotlib
+  * A python library used to display the landmarks in the images
