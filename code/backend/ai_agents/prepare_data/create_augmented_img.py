@@ -13,8 +13,6 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from handler import img_generator, create_alphabet_to_class_dic
 
 
-
-
 # source directory
 data_aug='./data/for_augmentation/'
 

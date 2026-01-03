@@ -1,5 +1,6 @@
 ###################################################
 # This program creates the dataset for Classifier #
+# only applicable for real hands                  #s
 ###################################################
 
 import os
@@ -10,7 +11,7 @@ from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 
 # Path to your augmented images
-DATA = './data/augmented/'
+DATA = './data/'
 
 # Path to the new MediaPipe model
 MODEL_PATH = 'models/hand_landmarker.task'
@@ -68,3 +69,4 @@ with open('data.pickle', 'wb') as f:
     pickle.dump({'data': data, 'labels': labels}, f)
 
 print("Dataset created successfully!")
+print(labels)

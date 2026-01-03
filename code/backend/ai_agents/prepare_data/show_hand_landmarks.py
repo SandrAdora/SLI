@@ -14,7 +14,7 @@ mp_drawing_styles=mp.solutions.drawing_styles
 
 hands=mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3) 
 # Where the img are stored
-DATA ='./data'
+DATA ='./data/'
 
 # Iterte over the folder data and the classes in the folder and add landmarks to the images located inside the folders
 for dir_ in os.listdir(DATA):

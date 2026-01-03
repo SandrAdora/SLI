@@ -7,3 +7,4 @@ spacy
 deep_translator
 torch
 requests
+tensorflow
