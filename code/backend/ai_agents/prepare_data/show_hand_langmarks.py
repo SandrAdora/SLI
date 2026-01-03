@@ -1,11 +1,6 @@
 ###################################################
-# This program only show the landmarks on the img #
+# This program only shows the landmarks on the img#
 ###################################################
-
-
-
-
-
 import os
 import mediapipe as mp 
 import cv2

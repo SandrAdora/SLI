@@ -2,7 +2,6 @@
 # This program creates the dataset for Classifier #
 #                                                 #
 ###################################################
-
 import os
 import mediapipe as mp 
 import cv2

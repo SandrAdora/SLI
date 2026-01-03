@@ -1,6 +1,6 @@
 # Vision & Business Case Artifact
 
-This is a web-base Software aimed to be a communication platform for deaf inclusion. 
+This is a web-base Software aimed to be a communication platform for deaf inclusion.
 
 Millions of deaf and hard-of-hearing individuals face  daily communication barriers in healthcare, workspaces, and public services.
 
@@ -19,10 +19,9 @@ Our Software aimes to bridge the communication between sign-language and written
 
 * Recognize sign language gestures in real time
 * Translate them into text (or speech in later phase)
-* Convert spoken/written language back into sign language animations
+* (Convert spoken)/written language back into sign language animations
 
 Therefore enabling seamles communication between deaf individuals and hearing individuals. Thisma platform an be accessible from any browser, no installation needed no special software needed. The *sign language* will be translated to *english*, other langanguages can be added later.
-
 
 **Value for Deaf individuals**
 
