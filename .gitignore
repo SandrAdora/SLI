@@ -55,7 +55,7 @@ Thumbs.db
 # Project-specific ignores
 # -------------------------
 
-# Your dataset folder
+# Dataset folder
 code/backend/ai_agents/prepare_data/data/
 
 # Model checkpoints (if you add ML later)

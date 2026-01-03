@@ -30,7 +30,7 @@ if not cap.isOpened():
     exit()
 for key,value in alphabet_to_class_dic.items():
     
-    class_path = os.path.join(IMG_STORAGE, str(value) )
+    class_path = os.path.join(IMG_STORAGE, key )
     os.makedirs(class_path, exist_ok=True)
     print(f"\nPreparing to collect data for class '{key}'")
     #  wait for user to start the script 
@@ -59,7 +59,7 @@ for key,value in alphabet_to_class_dic.items():
         cv2.imshow("frame", frame)
         
         # save the frame 
-        cv2.imwrite(os.path.join(class_path, f"img_{count}_{key}.jpg"), frame)
+        cv2.imwrite(os.path.join(class_path, f"img_{count}_{key.lower()}.jpg"), frame)
         count+=1
         print(f"Images taken: {count}")
         

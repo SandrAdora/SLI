@@ -21,7 +21,7 @@ def create_alphabet_to_class_dic(number_of_classes: int):
     alphabets = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
     alphabet_to_class={}
     # Map Class to alphabets
-    for i in range(len(number_of_classes)):
+    for i in range(number_of_classes):
         alphabet_to_class[alphabets[i]]=i
     return alphabet_to_class
 
@@ -36,7 +36,7 @@ def augumented_image(img):
     # flip horizontaly 
     augmented.append(cv2.flip(img, 1))
     # rotate to 15 degrees 
-    m=cv2.getRotationMatrix2D((img.shape[1]//[2], img.shape[0]//2), 15,1)
+    m=cv2.getRotationMatrix2D((img.shape[1]//2, img.shape[0]//2), 15,1)
     augmented.append(cv2.warpAffine(img, m, (img.shape[1], img.shape[0])))  
     # add gaussian noise to simulate the different camera versions 
     noise=np.random.normal(0, 15, img.shape).astype(np.uint8)
@@ -48,7 +48,7 @@ def augumented_image(img):
 
 
 # Generate an image   
-def img_generator(alphabet: str, numbers_of_dataset:int, img_path:str,img_alph: str) -> str:
+def img_generator(alphabet: str, numbers_of_dataset:int,  img_source:str, img_dest:str, img_alph: str, number_of_classes:int = 26,) -> str:
     """This function generates a specified amount of img dataset for a defined alphabet. The format of the img will be .jpg
     Args:
         alphabet (str): The Alphabet 
@@ -58,13 +58,28 @@ def img_generator(alphabet: str, numbers_of_dataset:int, img_path:str,img_alph: 
     Returns:
         str (str): A notification that files were generated"""
     # Check if path exist and end script if it doesnt 
-    fullpath=os.path.join(img_path, img_alph)
+    fullpath=os.path.join(img_source, img_alph)
     if not os.path.exists(fullpath):
         print("Error: Path does not exit")
         exit()
-    # generate and store img
-    for i in range(numbers_of_dataset):
-        for aug in augumented_image(img_alph):
-            filename=os.path.join(img_path, f"img_{i}_{alphabet}.jpg")
-            cv2.imwrite(filename, aug)    
+    
+    # load img
+    img=cv2.imread(fullpath)
+    if img is None:
+        print(f"Error: Could not load image {fullpath}")
+        return 
+
+    # Create destination path for each class
+    class_path=os.path.join(img_dest, alphabet)
+    os.makedirs(class_path, exist_ok=True)
+    
+    count=0
+    while count < numbers_of_dataset:
+        
+        for aug in augumented_image(img):
+            filename=os.path.join(class_path, f"img_{count}_{alphabet}.jpg")
+            cv2.imwrite(filename, aug)
+            count+=1
+            if count >= numbers_of_dataset:
+                break
     return f" {numbers_of_dataset} Images for Sign Language {alphabet} have been created."
