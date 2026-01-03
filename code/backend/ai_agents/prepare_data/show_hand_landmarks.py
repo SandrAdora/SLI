@@ -13,9 +13,10 @@ mp_drawings = mp.solutions.drawing_utils
 mp_drawing_styles=mp.solutions.drawing_styles
 
 hands=mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3) 
-
+# Where the img are stored
 DATA ='./data'
 
+# Iterte over the folder data and the classes in the folder and add landmarks to the images located inside the folders
 for dir_ in os.listdir(DATA):
     for img_pth in os.listdir(os.path.join(DATA, dir_)):
         img = cv2.imread(os.path.join(DATA, dir_, img_pth))
@@ -33,5 +34,5 @@ for dir_ in os.listdir(DATA):
         
         plt.figure()
         plt.imshow(img_rgb)
-
+# Show the images 
 plt.show()
