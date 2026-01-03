@@ -32,17 +32,18 @@
 * Latency target for video calls: < 300 ms under typical conditions.
 * Translation response time: < 1–2 seconds for short utterances.
 * Fallback to pure text if video/AI fails or network is weak.
-* Constrains: The system will only work on Computers and Laptops with webcams
-* The Sign-Language used will be the American-Sign-Language. (ASL)
+* Constrains:
+  * The system will only work on Computers and Laptops with webcams
+  * The Sign-Language used will be the American-Sign-Language. (ASL)
 
 ## Program
 
 * Programing language used:
   * Code:
     * (backend) Python
-    *  (frontend) HTML/CSS/JS
+    * (frontend) HTML/CSS/JS
 * IDE: Visual Studio Code
-* Versionsystem: Git / GitHub
+* Versionsystem control: Git / GitHub
 
 ## Machine
 
