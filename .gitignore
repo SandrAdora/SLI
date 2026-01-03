@@ -1,2 +1,68 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+*.pickle
+
+# Virtual environments
+sli/
+.sli/
+.venv/
+env/
+ENV/
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dll
+*.dylib
+
+# Build directories
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+logs/
+*.log
+
+# Cache
+.cache/
+*.cache
+.cache/
+.pytest_cache/
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Project-specific ignores
+# -------------------------
+
+# Your dataset folder
 code/backend/ai_agents/prepare_data/data/
-.env
+
+# Model checkpoints (if you add ML later)
+checkpoints/
+models/
+saved_models/
+
+# Temporary output
+tmp/
+temp/
+output/
