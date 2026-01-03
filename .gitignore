@@ -12,6 +12,7 @@ __pycache__/
 # Virtual environments
 sli/
 .sli/
+.env
 .venv/
 env/
 ENV/
@@ -66,3 +67,5 @@ saved_models/
 tmp/
 temp/
 output/
+
+
