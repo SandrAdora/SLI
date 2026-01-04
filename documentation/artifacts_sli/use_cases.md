@@ -2,7 +2,7 @@
 
 ## Use Case 1 - Communication via ASL
 
-A user can communicate with the system via  *sign language* by using the web cam or a desktop. The system interprets the sign language into texts
+A user can communicate with the system via  *sign language* by using the web cam . The system interprets the sign language into texts
 and displays the text on the screen.
 
 ## Use Case 2 - Communication via Text
@@ -27,7 +27,7 @@ Then pressing the sign-up button and the account is created
 The User can sign In to the system by typing:
 
     * Email Address
-    * Password 
+    * Password
 The User profile pops up and the user can start chatting with friends if the have a friendslist
 
 ## Use Case 4 - Add Friends

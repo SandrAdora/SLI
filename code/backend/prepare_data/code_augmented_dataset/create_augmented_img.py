@@ -9,7 +9,9 @@
 import os
 import sys
 # add path to skript 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+HANDLER_PATH = os.path.join(BASE_DIR, "handler") 
+sys.path.append(HANDLER_PATH)
 from handler import img_generator, create_alphabet_to_class_dic
 
 

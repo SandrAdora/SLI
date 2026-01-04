@@ -31,10 +31,10 @@
 * Video communication: WebRTC for P2P video
 * Latency target for video calls: < 300 ms under typical conditions.
 * Translation response time: < 1–2 seconds for short utterances.
-* Fallback to pure text if video/AI fails or network is weak.
 * Constrains:
   * The system will only work on Computers and Laptops with webcams
   * The Sign-Language used will be the American-Sign-Language. (ASL)
+  * Fallback to pure text if video/AI fails or network is weak.
 
 ## Program
 
