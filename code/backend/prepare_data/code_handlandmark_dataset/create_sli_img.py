@@ -9,9 +9,9 @@
 import os
 import cv2
 import time
-from handler import create_alphabet_to_class_dic
+from handler.alphabet_2_class_dir_handler import create_alphabet_to_class_dic
 # setup location to store the images
-IMG_STORAGE = "./data"
+IMG_STORAGE = "../data/handlandmark/imgs"
 if not os.path.exists(IMG_STORAGE):
     os.makedirs(IMG_STORAGE)
     
@@ -37,7 +37,7 @@ for key,value in alphabet_to_class_dic.items():
     while True:
         ret, frame = cap.read()
         if not ret:
-            print("Error: Faile to grab frame")
+            print("Error: Fail to grab frame")
         
         #  wait for user to start the script 
         cv2.putText(frame, "Ready? Press ENTER:"(50, 200),cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 255, 0),3)
@@ -63,6 +63,7 @@ for key,value in alphabet_to_class_dic.items():
         count+=1
         print(f"Images taken: {count}")
         
+      
         # Exit early if user presses q
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break

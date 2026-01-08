@@ -12,7 +12,8 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 HANDLER_PATH = os.path.join(BASE_DIR, "handler") 
 sys.path.append(HANDLER_PATH)
-from handler import img_generator, create_alphabet_to_class_dic
+from handler.agumented_img_handler import img_generator
+from handler.alphabet_2_class_dir_handler import  create_alphabet_to_class_dic
 
 
 # source directory

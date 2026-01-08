@@ -4,9 +4,10 @@
 
 ### World
 
+* We assume the users are literate (can read and write)
 * The device used has a working camera and display
 * We assume there is stable Internet (WLAN or Hotspot)
-* We assume the users are literate (can read and write)
+* There is a domain available
 
 ## Requirements
 

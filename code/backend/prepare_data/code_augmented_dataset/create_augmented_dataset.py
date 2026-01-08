@@ -8,7 +8,7 @@ import sys
 DATA="../data/augmented/"
 CSV_OUT="../data/augmented.csv"
 
-# Open the file 
+# Open the file
 with open(CSV_OUT, "w", newline="") as file:
     writer=csv.writer(file)
     # setup labels 
