@@ -4,15 +4,18 @@ import cv2
 import csv 
 import sys
 
-
+# Set the location from where the data will be collected from
 DATA="../data/augmented/"
+# Set the name of our dataset with csv format
 CSV_OUT="../data/augmented.csv"
 
 # Open the file
 with open(CSV_OUT, "w", newline="") as file:
     writer=csv.writer(file)
     # setup labels 
+    # Iterate through the folder in data and use the names of the folder as labels
     for label in os.listdir(DATA):
+        # set the class path 
         class_dir=os.path.join(DATA, label)
         # get the images 
         for img_name in os.listdir(class_dir):
@@ -23,7 +26,7 @@ with open(CSV_OUT, "w", newline="") as file:
             
             # resize img to 28x28 
             img=cv2.resize(img,(28,28) )
-            #  flatten 
+            #  flatten and get the pixels
             pixels=img.flatten().tolist()
             
             # write label to pixes for each row 
