@@ -8,3 +8,7 @@ deep_translator
 torch
 requests
 tensorflow
+ipykernel
+fastapi
+seaborn
+pillow
